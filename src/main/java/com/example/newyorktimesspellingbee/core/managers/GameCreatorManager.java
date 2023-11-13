@@ -16,7 +16,7 @@ import java.util.Random;
  * It manages the creation of game data for the New York Times Spelling Bee game,
  * including word filtering and validation.
  */
-public class GameCreatorManager {
+public class GameCreatorManager implements GameCreatorService{
 
     private final DataReader dataReader;
     private final DataFilter dataFilter;

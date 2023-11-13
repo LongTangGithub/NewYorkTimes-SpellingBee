@@ -11,7 +11,7 @@ import java.util.Scanner;
  * It reads words from a specified text file, processes them, and returns them as a list of strings.
  */
 public class TxtReader implements DataReader {
-    private final String FILE_PATH = "data.txt";
+    private final String FILE_PATH = "com/example/newyorktimesspellingbee/data.txt";
     private final File file;   // File object representing the data file.
     private List<String> data; // Cached data read from the file.
 

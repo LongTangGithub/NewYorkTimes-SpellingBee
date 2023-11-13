@@ -5,6 +5,10 @@ import com.example.newyorktimesspellingbee.core.constants.Colors;
 
 import java.util.Random;
 
+/**
+ * Beehive represents the hexagonal grid of cells in the New York Times Spelling Bee game.
+ * It manages the layout and behavior of individual BeehiveCells.
+ */
 public class Beehive extends Pane {
     private final BeehiveCell[] cells;
     private final double CELL_EDGE_WIDTH = 50;
@@ -16,6 +20,11 @@ public class Beehive extends Pane {
             {false, true, false}
     };
 
+    /**
+     * Constructs a Beehive with a specified string of letters. Each letter is used to create a BeehiveCell.
+     *
+     * @param letters A string of letters, each representing a cell in the beehive.
+     */
     public Beehive(String letters) {
         cells = new BeehiveCell[letters.length()];
         for (int i = 0; i < cells.length; i++) {
@@ -38,6 +47,10 @@ public class Beehive extends Pane {
         getChildren().addAll(cells);
     }
 
+    /**
+     * Shuffles the letters in the Beehive cells, excluding the center cell.
+     * This method randomizes the cell values while keeping the center cell constant.
+     */
     public void shuffle() {
         Random random = new Random();
         for (int i = 0; i < cells.length; i++) {
@@ -53,6 +66,11 @@ public class Beehive extends Pane {
         }
     }
 
+    /**
+     * Retrieves an array of BeehiveCells.
+     *
+     * @return An array containing all the BeehiveCell instances in the beehive.
+     */
     public BeehiveCell[] getCells() {
         return cells;
     }
